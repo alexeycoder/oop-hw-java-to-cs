@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Oop.WorkerDocument.Entities
 {
 	/// <summary>
@@ -22,10 +17,11 @@ namespace Oop.WorkerDocument.Entities
 			Salary = salary;
 		}
 
+		public Worker() : this(string.Empty, 0, 0) { }
+
 		public override string ToString()
 		{
 			return $"Имя: {Name}, Возраст: {Age}, З/п: {Salary}";
 		}
-
 	}
 }

@@ -17,5 +17,7 @@ namespace Oop.WorkerDocument.Abstract
 	public interface IButton
 	{
 		void Click();
+
+		event EventHandler Clicked;
 	}
 }

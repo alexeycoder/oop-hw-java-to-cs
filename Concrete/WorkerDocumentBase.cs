@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Oop.WorkerDocument.Abstract;
 using Oop.WorkerDocument.Entities;
 
 namespace Oop.WorkerDocument.Concrete
 {
-	public abstract class WorkerDocumentBase
+	public abstract class WorkerDocumentBase : IDocument
 	{
 		protected Worker worker;
 
@@ -14,5 +11,7 @@ namespace Oop.WorkerDocument.Concrete
 		{
 			this.worker = worker ?? throw new NullReferenceException(nameof(worker));
 		}
+
+		public abstract void SaveAs();
 	}
 }
